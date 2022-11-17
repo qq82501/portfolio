@@ -1,0 +1,78 @@
+.landing_page__container {
+  background-image: linear-gradient(to bottom, #eff8f5 80%, #fff 80%);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.main_nav__box {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.intro__box {
+  margin: 0 auto;
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  grid-template-rows: 46rem;
+  justify-items: center;
+  padding: 8rem 5rem 5rem 5rem;
+  z-index: 200;
+}
+
+.hero_text_box {
+  margin-top: 3rem;
+}
+.hero_description {
+  font-size: 3rem;
+  padding-left: 0.5rem;
+  color: #4e615e;
+}
+
+.hero_title {
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.hero_objection {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.hero_img__box {
+  position: relative;
+}
+
+.hero_img {
+  height: 100%;
+  justify-self: start;
+}
+
+.light {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgba(255, 204, 83, 0.388);
+  box-shadow: 0 0 10px 10px rgba(255, 204, 83, 0.388);
+  border-radius: 50%;
+  position: absolute;
+  top: 10.4rem;
+  left: 16.7rem;
+}
+
+.light_animation {
+  animation: lighting 3.5s forwards infinite ease-in;
+}
+
+@keyframes lighting {
+  50% {
+    box-shadow: 0 0 100px 50px rgb(255, 203, 83);
+  }
+
+  100% {
+    box-shadow: 0 0 10px 10px rgba(255, 204, 83, 0.388);
+  }
+}
