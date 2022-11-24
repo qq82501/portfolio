@@ -50,6 +50,7 @@ function WorkReact() {
       return <WorkReactItem work={work} key={work.name} />;
     if (deviceMode === "mobile")
       return <WorkReactItemMobile work={work} key={work.name} />;
+    return null;
   });
 
   return <main className={styles.work_react__container}>{workContent}</main>;
