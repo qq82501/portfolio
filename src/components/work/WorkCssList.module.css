@@ -1,7 +1,31 @@
 .work_css_list__container {
+  aspect-ratio: 1/1.1;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  height: 75%;
+  column-gap: 3rem;
   justify-items: center;
+  align-content: center;
   list-style: none;
-  margin: 10rem 0rem;
+}
+
+/* width below 900px */
+@media (max-width: 56.25em) {
+  .work_css_list__container {
+    grid-template-columns: 55%;
+    grid-template-rows: repeat(3, auto);
+    height: 95%;
+    column-gap: unset;
+    row-gap: 3rem;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 6rem;
+  }
+}
+/* Below width 464px */
+@media (max-width: 29em) {
+  .work_css_list__container {
+    grid-template-columns: 80%;
+  }
 }

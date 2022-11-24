@@ -2,7 +2,7 @@ import WorkJsItem from "./WorkJsItem";
 import styles from "./WorkJsList.module.css";
 
 function WorkJsList() {
-  const cssWorks = [
+  const jsWorks = [
     {
       name: "Forkify",
       description:
@@ -24,7 +24,7 @@ function WorkJsList() {
     {
       name: "虛擬網路銀行",
       description: (
-        <p class="work-text">
+        <p className="work_text">
           可以查看交易紀錄並在不同的帳號間進行轉帳、貸款等活動。
           <br />
           <strong>
@@ -61,7 +61,7 @@ function WorkJsList() {
     {
       name: "臉部辨識",
       description: (
-        <p class="work-text">
+        <p className="work_text">
           使用React.JS撰寫，運用Particles創造如宇宙般的背景，串接clarifai
           API進行人臉辨識。後端使用node.js + PostgreSQL。
           <br />
@@ -75,8 +75,8 @@ function WorkJsList() {
     },
   ];
 
-  const listContent = cssWorks.map((work) => (
-    <li>
+  const listContent = jsWorks.map((work) => (
+    <li key={work.name} className={styles.work_js__item}>
       <WorkJsItem work={work} />
     </li>
   ));

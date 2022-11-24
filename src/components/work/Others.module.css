@@ -1,3 +1,10 @@
+.others__container {
+  height: 100vh;
+}
+.others__title {
+  font-size: 3.6rem;
+  font-weight: 500;
+}
 .genre {
   display: inline-flex;
   justify-content: space-between;
@@ -25,7 +32,8 @@
 }
 
 .switch {
-  width: 5.2rem;
+  /* width: 5.2rem; */
+  width: 36%;
   height: 100%;
   border-radius: 30px;
   position: absolute;
@@ -44,13 +52,27 @@
 
 @keyframes switch-to-js {
   100% {
-    transform: translateX(47%);
-    width: 68%;
+    transform: translateX(55%);
+    width: 65%;
   }
 }
 @keyframes switch-to-css {
   100% {
-    transform: translateX(47%);
-    width: 68%;
+    transform: translateX(55%);
+    width: 65%;
+  }
+}
+
+/* Below width 1200px   */
+@media (max-width: 75em) {
+  .others__container:global(.js) {
+    height: 100%;
+  }
+}
+
+/* width below 900px */
+@media (max-width: 56.25em) {
+  .others__container {
+    height: 100%;
   }
 }

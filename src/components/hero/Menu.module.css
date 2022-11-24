@@ -1,0 +1,15 @@
+.menu__container {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  font-weight: 700;
+  height: 30vh;
+  justify-content: space-between;
+  /* gap: 5rem; */
+}
+
+.menu__list a:link,
+.menu__list a:visited {
+  text-decoration: none;
+  color: #1c362f;
+}

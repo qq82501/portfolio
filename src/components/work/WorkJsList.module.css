@@ -1,8 +1,36 @@
 .work_js_list__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  /* justify-items: center; */
   list-style: none;
-  margin: 3rem 0rem;
+  margin: 6rem auto 3rem auto;
   row-gap: 4rem;
+  column-gap: 3rem;
+}
+
+:global(.mobile) .work_js_list__container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Below width 1200px   */
+@media (max-width: 75em) {
+  .work_js_list__container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+}
+
+/* width below 900px */
+@media (max-width: 56.25em) {
+  .work_js_list__container {
+    width: 95%;
+  }
+}
+
+/* width below 656px */
+@media (max-width: 41em) {
+  .work_js_list__container {
+    grid-template-columns: 1fr !important;
+    width: 90%;
+  }
 }

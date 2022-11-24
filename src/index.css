@@ -70,12 +70,6 @@ ul {
   list-style: none;
 }
 
-.heading-primary {
-  font-size: 8rem;
-  font-weight: 900;
-  line-height: 1.2;
-}
-
 .heading-secondary {
   font-size: 3.2rem;
   letter-spacing: -0.5px;
@@ -152,3 +146,49 @@ ul {
   max-width: 140rem;
   margin: 0 auto;
 }
+
+.sticky {
+  width: 100%;
+  position: fixed !important;
+  z-index: 100;
+  background-color: rgba(159, 210, 197, 85%);
+}
+/* width below 776px */
+@media (max-width: 48.5em) {
+  html {
+    font-size: 50%;
+  }
+  .heading-secondary {
+    font-size: 4rem;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+  }
+
+  .heading-subtitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+
+/* Below width 384px  (24em)  */
+/* @media (max-width: 25em) {
+  html {
+    font-size: 43.75%;
+  }
+} */
+
+/* Aspect-ratio below 0.75 */
+
+/* @media (max-aspect-ratio: 91/100) and (min-aspect-ratio: 66/100),
+  (max-aspect-ratio: 133/100) and (min-aspect-ratio: 150/100) {
+  html {
+    font-size: 80%;
+  }
+} */
+
+/* Above height 640px  (40em)  */
+/* @media (max-aspect-ratio: 160/100) and (min-aspect-ratio: 133/100) {
+  html {
+    font-size: 60%;
+  }
+} */

@@ -1,0 +1,120 @@
+.work_react__container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  column-gap: 8rem;
+  text-align: center;
+}
+
+.work_react__img_box {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  transform: translateX(-5%);
+}
+
+.work_react__img_box img {
+  width: 100%;
+  box-shadow: 0px -7px 15px 1px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+}
+.work_react__img_box img:nth-child(1) {
+  aspect-ratio: 2/1.3;
+  width: 75%;
+  height: auto;
+  object-fit: fill;
+}
+
+.work_react__img_box img:nth-child(2) {
+  width: unset;
+  height: 70%;
+  box-shadow: -23px -4px 15px 1px rgb(0 0 0 / 20%);
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+.work_react__text_box {
+  display: grid;
+  grid-template-rows: auto auto;
+  text-align: center;
+  padding: 1.5rem;
+  align-content: center;
+  align-self: flex-start;
+}
+.project_title {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.project_description {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.links_box {
+  margin-bottom: 2.5rem;
+}
+.work_react__feature_box {
+  width: 70%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 1rem;
+  font-size: 1.4rem;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  color: #575f5d;
+}
+
+.feature_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+}
+
+.work_react__feature_box p {
+  font-size: 1.8rem;
+  color: #1c362f;
+  font-weight: 500;
+}
+
+.work_react__tool_box {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  font-size: 1.4rem;
+  color: #575f5d;
+}
+
+.work_react__tool_box p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1c362f;
+  font-weight: 500;
+}
+
+.tool_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  row-gap: 0.5rem;
+}
+
+/* Below width 512px*/
+@media (max-width: 32em) {
+  .work_react__feature_box {
+    width: 100%;
+  }
+  .feature_list {
+    column-gap: 0rem;
+  }
+}
+/* Below width 384px*/
+@media (max-width: 24em) {
+  .work_react__feature_box {
+    font-size: 1rem;
+  }
+}

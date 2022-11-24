@@ -1,11 +1,15 @@
+import { useSelector } from "react-redux";
 import styles from "./WorkCssItem.module.css";
 
 function WorkCssItem(props) {
+  const { deviceMode } = useSelector((state) => state);
+
   const toggleDescriptionHandler = (e) => {
     const targetEl = e.target.closest(`.${styles.work_item_css}`);
     if (!targetEl) return;
     targetEl.classList.toggle("work_item_css__active");
   };
+
   return (
     <div className={`prevent-hidden ${styles.work_item_box_css}`}>
       <div
@@ -19,6 +23,12 @@ function WorkCssItem(props) {
           alt={props.work.imageAlt}
         />
         <div className={styles.work_item_filter}>
+          {deviceMode === "mobile" && (
+            <div className={styles.filter_text}>
+              <span className={styles.heading_subtitle}>{props.work.name}</span>
+              <p className={styles.work_text}>{props.work.description}</p>
+            </div>
+          )}
           <div className={styles.link_box}>
             <a
               className={styles.work_link}
@@ -45,10 +55,12 @@ function WorkCssItem(props) {
           </div>
         </div>
       </div>
-      <div className={styles.work_text_box}>
-        <span className={styles.heading_subtitle}>{props.work.name}</span>
-        <p className={styles.work_text}>{props.work.description}</p>
-      </div>
+      {deviceMode === "pc" && (
+        <div className={styles.work_text_box}>
+          <span className={styles.heading_subtitle}>{props.work.name}</span>
+          <p className={styles.work_text}>{props.work.description}</p>
+        </div>
+      )}
     </div>
   );
 }

@@ -12,7 +12,7 @@ function WorkJsItem(props) {
         <div className={styles.work_item_filter}>
           <div className={styles.work_text_box}>
             <span className={`heading-subtitle`}>{props.work.name}</span>
-            <p className={styles.work_text}>{props.work.description}</p>
+            <div className={styles.work_text}>{props.work.description}</div>
           </div>
           <div className={styles.link_box}>
             <a
@@ -33,7 +33,7 @@ function WorkJsItem(props) {
               href={props.work.github}
             >
               <ion-icon
-                className={styles.work_icon}
+                // className={styles.work_icon}
                 name="logo-github"
               ></ion-icon>
             </a>

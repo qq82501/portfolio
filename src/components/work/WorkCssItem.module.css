@@ -1,4 +1,5 @@
 .work_item_box_css {
+  aspect-ratio: 2/1.1;
   transition: all 0.25s;
   position: relative;
 }
@@ -10,7 +11,6 @@
   cursor: unset;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   border-radius: 14px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,8 +18,8 @@
 
 /* size of work card */
 .work_item_css {
-  width: 35rem;
-  height: 20rem;
+  width: 100%;
+  height: 100%;
 }
 
 .work_item_img {
@@ -31,7 +31,7 @@
 
 .work_item_filter {
   border-radius: 14px;
-  width: 35rem;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -40,22 +40,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+}
+
+:global(.mobile) .work_item_filter {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10%;
+}
+
+.filter_text {
+  align-self: flex-end;
+  font-size: 2.4rem;
+  text-align: center;
+  padding: 1rem;
 }
 
 .link_box {
-  display: flex;
-  margin-bottom: 1.2rem;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 5rem;
+  justify-self: center;
+
+  /* the width and height velues is to center grid box */
+  width: 58%;
+  height: 31%;
+}
+
+:global(.mobile) .link_box {
+  align-self: flex-start;
 }
 .work_link:link,
 .work_link:visited {
+  aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 6rem;
-  height: 6rem;
-  padding: 0.4rem;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.831);
   border: 3px dashed #5fb49c;
@@ -63,22 +85,26 @@
 }
 
 .link_box ion-icon {
-  font-size: 8rem;
+  font-size: unset;
+  width: 80%;
+  height: 80%;
   color: #5fb49c;
   transition: all 0.3s;
 }
 
 .work_text_box {
   background-color: #9fd2c4;
-  width: 32rem;
+  /* width: 32rem; */
+  width: 100%;
   padding: 1.2rem 1.8rem;
   border-radius: 30px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
   font-size: 1.4rem;
+  font-weight: 500;
   text-align: center;
   position: absolute;
   bottom: 0%;
-  left: 5%;
+  left: 0%;
   transition: all 0.25s;
   opacity: 0;
   z-index: -1;
@@ -119,4 +145,18 @@
 :global(.work_item_css__active) ~ .work_text_box {
   opacity: 1;
   transform: translateY(160%);
+}
+
+/* width below 900px */
+@media (max-width: 56.25em) {
+}
+
+/* Below width 592px */
+@media (max-width: 37em) {
+  .filter_text {
+    font-size: 1.8rem;
+  }
+  :global(.mobile) .work_item_filter {
+    row-gap: 5%;
+  }
 }

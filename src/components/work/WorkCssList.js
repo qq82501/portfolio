@@ -30,7 +30,7 @@ function WorkCssList() {
   ];
 
   const listContent = cssWorks.map((work) => (
-    <li>
+    <li key={work.name}>
       <WorkCssItem work={work} />
     </li>
   ));

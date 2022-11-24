@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <a className={styles.footer_logo_link} href="#hero-section">
+      <a className={styles.footer_logo_link} href="#section-hero">
         <img
           className={styles.footer_logo_img}
           src={require("../../images/logo.png")}

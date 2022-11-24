@@ -33,13 +33,6 @@ function MainNavigator() {
             {/* <!-- <li className={styles.menu-icon}></li> --> */}
           </ul>
         </nav>
-        <button className={`btn ${styles.btn_menu}`}>
-          <ion-icon className={styles.menu_icon} name="menu-outline"></ion-icon>
-          <ion-icon
-            className={styles.menu_icon}
-            name="close-outline"
-          ></ion-icon>
-        </button>
       </div>
     </header>
   );

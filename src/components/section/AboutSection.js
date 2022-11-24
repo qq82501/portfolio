@@ -4,7 +4,7 @@ function AboutSection() {
   return (
     <section className={styles.section_about} id="section-about">
       <div className={styles.section_about_background}>
-        <h2 className={`heading-secondary ${styles.header_section}`}>About</h2>
+        <h2 className={`heading-secondary header-section`}>About</h2>
         <div className={styles.container_about}>
           <p className={styles.biography}>
             生於1993年5月1日，於2019年畢業於澳洲國立大學 (Australian National
